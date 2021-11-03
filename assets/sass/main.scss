@@ -1,0 +1,15 @@
+//abstracts
+@import './abstracts/variables';//no es necesario ./
+//base
+@import './base/reset';
+@import './base/animation';
+//components
+@import './components/buttons';
+@import './components/cards';
+//layout
+@import './layout/grid';
+@import './layout/header';
+@import './layout/navigation';
+@import './layout/footer';
+//pages
+@import './pages/home';

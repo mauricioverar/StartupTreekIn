@@ -1,0 +1,48 @@
+.tarjeta {
+    color: $black;
+    padding: 20px 30px;
+    margin: 0 30px;
+    border: 1px solid #aeacaf;
+    background: #fff;
+
+    &:hover {
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+        transition: box-shadow .5s cubic-bezier(.19, 1, .22, 1),-webkit-box-shadow .5s cubic-bezier(.19, 1, .22, 1) ;
+    }
+
+    &__titulo,
+    &__pricio {
+        font-family: $raleway;
+        margin: 0;
+        padding: .5rem;
+    }
+
+    &__titulo {
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    &__pricio {
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    &__linea {
+        border-color: #c7c8cc;
+    }
+
+    &__list {
+        min-height: 180px;
+        font-family: $openSans;
+    }
+
+    &__item {
+        font-size: .9rem;
+        line-height: 35px;
+    }
+
+    &__button {
+        padding-top: .5rem;
+        font-size: .95rem;
+    }
+}

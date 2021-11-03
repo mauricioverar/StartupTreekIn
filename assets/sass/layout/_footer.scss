@@ -1,0 +1,56 @@
+.footer {
+    padding: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    font-family: $raleway;
+    color: $white;
+    background: #221d23;
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-between;
+    }
+
+    &__item {
+        font-size: .8rem;
+        margin: 0 20px;
+
+        a {
+            text-decoration: none;
+            color: $white;
+
+            &:hover {
+                color: gray;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .footer {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+
+            &__text {
+                text-align: center;
+            }
+
+            &__list {
+                margin-top: 10px;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-content: center;
+            }
+
+            &__item {
+                margin: 15px 10px;
+            }
+    }
+}

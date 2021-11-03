@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontAwesome v.5.12.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <title>Startup Treek-in</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar"><!-- este navbar no es de bootstrap-->
+        <!-- 1º bloque para imagen-->
+        <div class="navbar__logo"><!-- metodología BEM-->
+            <img src="assets/img/Logo.svg" alt="logo">
+        </div>
+        <!-- 2º bloque para lista-->
+        <div class="navbar__container">
+        <!-- izquierda-->
+            <ul class="navbar__list--izquierda"><!-- modificador -->
+                <li class="navbar__item">
+                    <a href="#">Acerca de</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#">Características</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#">Precios</a>
+                </li>
+            </ul>
+        <!-- derecha-->
+            <ul class="navbar__list--derecha">
+                <li class="navbar__item">
+                    <a href="#">Iniciar Sesión</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" class="button">Regístrate</a>
+                </li>                
+            </ul>
+            <label for="menu" class="navbar__menu"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header__img">
+            <img src="assets/img/bg-hero.png" alt="hero">
+        </div>
+        <section class="header__description">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <h1 class="header__titulo">Haz Trekking sin Parar</h1>
+                    <p>Con Trekk-in te despreocuparás de la estimación de tu viaje, ya que con unos simples pasos, podrás definir la mejor ruta a tomar con tus compañeros de expedición.</p>
+                </div>
+            </div>
+        </section>
+    </header>    
+    <main class="main">
+        <section class="caracteristicas">
+            <h2 class="caracteristicas__titulo">Características</h2>
+            <div class="row caracteristicas__bloque">
+                <div class="caracteristicas__barchart col-12 col-sm-12 col-md-6">
+                </div>
+                <div class="caracteristicas__info col-12 col-sm-12 col-md-6">
+                    <h3 class="caracteristicas__subtitulo">Estadísticas de tu progreso</h3>
+                    <p class="caracteristicas__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium dolor eius sapiente, officia, exercitationem placeat distinctio aliquid commodi nemo quibusdam dicta saepe expedita quia! Exercitationem ipsa nam corporis quas?</p>        
+                </div>
+            </div>
+        </section>
+        <section class="precios">
+            <h2 class="precios__titulo">Precios</h2>
+            <div class="row precios__tarjeta">
+                <div class="tarjeta col-12 col-sm-12 col-md-6">
+                    <h3 class="tarjeta__titulo">Trekk-in Free</h3>
+                    <h4 class="tarjeta__pricio">$ 0 / mes</h4>
+                    <hr class="tarjeta__linea">
+                    <ul class="tarjeta__list">
+                        <li class="tarjeta__item">ver mapa creado por usuarios</li>
+                        <li class="tarjeta__item">Conectar con otros usuarios</li>
+                    </ul>
+                    <hr class="tarjeta__linea">
+                    <div class="tarjeta__button">
+                        <button class="button button--largo"><!-- modificador -->
+                            Obtén Free
+                        </button>
+                    </div>
+                </div>
+                <div class="tarjeta col-12 col-sm-12 col-md-6">
+                    <h3 class="tarjeta__titulo">Trekk-in Free</h3>
+                    <h4 class="tarjeta__pricio">$ 3500 / mes</h4>
+                    <hr class="tarjeta__linea">
+                    <ul class="tarjeta__list">
+                        <li class="tarjeta__item">Ver mapa creado por usuarios</li>
+                        <li class="tarjeta__item">Conectar con otros usuarios</li>
+                        <li class="tarjeta__item">Definir mejores rutas</li>
+                        <li class="tarjeta__item">Mapas Offline</li>
+                        <li class="tarjeta__item">Integración con otras aplicaciones</li>
+                    </ul>
+                    <hr class="tarjeta__linea">
+                    <div class="tarjeta__button">
+                        <button class="button button--largo">
+                            Obtén Premium
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <ul class="footer__list">
+            <li class="footer__item">
+                <a href="#">Legal</a>
+            </li>
+            <li class="footer__item">
+                <a href="#">Cookies</a>
+            </li>
+            <li class="footer__item">
+                <a href="#">Sobre Anuncios</a>
+            </li>
+        </ul>
+        <div class="footer__copy">
+            <small>&copy; 2018 Treek-in SPA.</small>
+        </div>
+    </footer>
+</body>
+</html>
