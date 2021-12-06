@@ -1,209 +1,238 @@
 .main {
-    .caracteristicas {
-        text-align: center;
-        margin: 15px 0 30px 0;
+  .caracteristicas {
+    text-align: center;
+    margin: -55px 0 30px 0;
 
-        &__bloque {
-            margin: 50px 0;
-        }
-/* animar */
-        &__barchart {//grafico
-            width: 100%;
-            height: 165px;
-            background: url('../img/bar-graph.svg');//ojo con la ruta(../ retrocede a carpeta anterior, osea desde css sale y entra a img
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position:center ;
-            margin-left: 100px;
-            animation: fadeIn 1.5s ease-in-out infinite alternate;//animar
-        }
-
-        &__info {
-            width: 400px;
-            text-align: left;
-            line-height: 25px;
-        }
-
-        &__texto {
-            margin-top: 20px;
-        }
+    &__bloque {
+      margin: 80px 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    //   grid-column: -3/-1;
+    }
+    /* animar */
+    &__barchart {
+      //grafico
+      width: 100%;
+      height: 165px;
+      background: url("../img/bar-graph.svg"); //ojo con la ruta(../ retrocede a carpeta anterior, osea desde css sale y entra a img
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      margin-left: 100px;
+      animation: fadeIn 1.5s ease-in-out infinite alternate; //animar
     }
 
-    .precios {
-        background-image: url('../img/bg-price.svg');
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-clip: border-box;
-        color: $white;
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        margin-top: 10px;
-
-        &__tarjeta {
-            padding: 0 200px;
-        }
-
-        &__titulo {
-            text-align: center;
-            padding-top: 220px;
-            color: $white;
-            padding-bottom: 50px;
-        }
+    &__info {
+      width: 400px;
+      text-align: left;
+      line-height: 25px;
     }
+
+    &__texto {
+      margin-top: 20px;
+    }
+  }
+
+  .precios {
+    background-image: url("../img/bg-price.svg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    color: $white;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-top: 10px;
+
+    &__tarjeta {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    //   grid-column: -3/-1;
+      .tarjeta {
+        width: 18rem;
+        height: 28rem;
+      }
+    }
+
+    &__titulo {
+      text-align: center;
+      padding-top: 220px;
+      color: $white;
+      padding-bottom: 50px;
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
-    .main {
-        .caracteristicas {
-            text-align: center;
-            margin: 0;
+  .main {
+    .caracteristicas {
+      text-align: center;
+      //margin: 0;
+      
+      &__bloque {
+       // margin: 0;
+       grid-template-columns: 1fr;
 
-            &__bloque {
-                margin: 0;
-            }
-            &__barchart {
-                margin-left: 0;
-                margin-top: 10px;
-            }
+      }
+      &__barchart {
+        margin-left: 0;
+        margin-top: 10px;
+      }
 
-            &__info {
-                width: 100%;
-                padding: 10px
-            }
+      &__info {
+        width: 100%;
+        padding: 10px;
+      }
 
-            &__titulo {
-                margin: 20px 0;
-            }
+      &__titulo {
+        margin: 20px 0;
+      }
 
-            &__texto {
-                margin-top: 20px;
-            }
-        }
-
-        .precios {
-            background-position: top center;
-            width: 100%;
-            height: 100%;
-            padding-bottom: 100px;
-            margin-top: -100px;
-
-            &__tarjeta {
-                padding: 0;
-            }
-
-            &__titulo {
-                padding-top: 220px;
-            }
-        }
+      &__texto {
+        margin-top: 20px;
+      }
     }
+
+    .precios {
+      background-position: top center;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 100px;
+
+      &__tarjeta {
+        padding: 0;
+        grid-template-columns: 1fr;
+        .tarjeta {
+            margin-left: 15vw;
+            width: 18rem;
+            height: 28rem;
+          }
+      }
+
+      &__titulo {
+        padding-top: 280px;
+      }
+    }
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .main {
-        .caracteristicas {
-            text-align: center;
-            margin: 0;
+  .main {
+    .caracteristicas {
+      text-align: center;
+      margin: 0;
 
-            &__bloque {
-                margin: 0;                
-            }
-            &__barchart {
-                margin-left: 0;
-                margin-top: 10px;
-            }
+      &__bloque {
+        margin: 0;
+      }
+      &__barchart {
+        margin-left: 0;
+        margin-top: 10px;
+      }
 
-            &__info {
-                width: 100%;
-                padding: 10px;
-            }
+      &__info {
+        width: 100%;
+        padding: 10px;
+      }
 
-            &__titulo {
-                margin: 20px 0;
-            }
+      &__titulo {
+        margin: 20px 0;
+      }
 
-            &__texto {
-                margin-top: 20px;
-            }
-        }
-
-        .precios {
-            background-position: top center;
-            width: 100%;
-            height: 100%;
-            margin-top: -100px;
-            margin-bottom: 100px;
-
-            &__tarjeta {
-                padding: 50px;
-            }
-
-            &__titulo {
-                padding-top: 220px;
-            }
-        }
+      &__texto {
+        margin-top: 20px;
+      }
     }
+
+    .precios {
+      background-position: top center;
+      width: 100%;
+      height: 100%;
+      margin-top: -100px;
+      margin-bottom: 100px;
+
+      &__tarjeta {
+        padding: 50px;
+      }
+
+      &__titulo {
+        padding-top: 220px;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .main {
-        .caracteristicas {
-            text-align: center;
-            margin: 0;
+  .main {
+    .caracteristicas {
+      text-align: center;
+    //   margin: 0;
+      
 
-            &__bloque {
-                margin: 0;                
-            }
-            &__barchart {
-                margin-left: 0;
-                margin-top: 10px;
-            }
+      &__bloque {
+        margin: 0;
+      }
+      &__barchart {
+        margin-left: 0;
+        margin-top: 10px;
+      }
 
-            &__info {
-                width: 100%;
-                padding: 10px;
-            }
+      &__info {
+        width: 100%;
+        padding: 10px;
+      }
 
-            &__titulo {
-                margin: 20px 0;
-            }
+      &__titulo {
+        margin: 20px 0;
+      }
 
-            &__texto {
-                margin-top: 20px;
-            }
-        }
-
-        .precios {
-            background-position: top center;
-            width: 100%;
-            height: 100%;
-            margin-top: -100px;
-            margin-bottom: 100px;
-
-            &__tarjeta {
-                padding: 0 100px;
-            }
-
-            &__titulo {
-                padding-top: 220px;
-            }
-        }
+      &__texto {
+        margin-top: 20px;
+      }
     }
+
+    .precios {
+      background-position: top center;
+      width: 100%;
+      height: 100%;
+      margin-top: -100px;
+      margin-bottom: 100px;
+
+      &__tarjeta {
+        padding: 0 100px;
+      }
+
+      &__titulo {
+        padding-top: 220px;
+      }
+    }
+    .tarjeta {
+      margin: 0rem 0rem 10rem 0rem;
+      width: 20rem;
+      height: 28rem;
+    }
+  }
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .main {
-        .precios {
-            background-position: top center;
-            width: 100%;
-            height: 100%;
-            margin-top: -100px;
-            margin-bottom: 100px;
+@media (min-width: 992px) {
+  .main {
+    .precios {
+      background-position: center top;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 100px;
+      margin-top: -100px;
 
-            &__tarjeta {
-                padding: 0 100px;
-            }
-        }
+      &__tarjeta {
+        margin-top: 2rem;
+      }
+      .tarjeta {
+        margin: 0rem 0rem 10rem 10rem;
+        width: 20rem;
+        height: 28rem;
+      }
     }
+  }
 }

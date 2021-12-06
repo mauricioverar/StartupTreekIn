@@ -2,8 +2,6 @@
   font-family: "Raleway", sans-serif;
   margin: 0;
   padding: * cero;
-  list-style: none;
-  text-decoration: none;
   box-sizing: border-box;
 }
 
@@ -287,7 +285,7 @@
   top: 120px;
   width: 1230px;
   position: absolute;
-  margin: 20px;
+  margin: 20px 0 20px 20px;
 }
 .header__description p {
   line-height: 25px;
@@ -335,7 +333,7 @@
     margin-bottom: 10px;
   }
 }
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) {
   .header__img {
     margin-top: 100px;
   }
@@ -369,6 +367,7 @@
   display: flex;
   justify-content: flex-end;
   flex-grow: 1;
+  list-style: none;
 }
 .navbar__list--derecha a {
   color: black;
@@ -378,6 +377,7 @@
   justify-content: flex-start;
   flex-grow: 1;
   margin-left: 20px;
+  list-style: none;
 }
 .navbar__list--izquierda a {
   margin: 0 20px;
@@ -389,27 +389,17 @@
   font-size: 30px;
 }
 
-@media (max-width: 575.98) {
+@media (max-width: 575.98px) {
   .navbar__list--derecha, .navbar__list--izquierda {
     display: none;
   }
 }
-@media (max-width: 576) and (max-width: 767.98) {
+@media (min-width: 576px) and (max-width: 770) {
   .navbar__list--derecha, .navbar__list--izquierda {
     display: none;
   }
 }
-@media (max-width: 768) and (max-width: 991.98) {
-  .navbar__menu {
-    display: none;
-  }
-}
-@media (max-width: 992) and (max-width: 1199.98) {
-  .navbar__menu {
-    display: none;
-  }
-}
-@media (max-width: 1200px) {
+@media (min-width: 771px) {
   .navbar__menu {
     display: none;
   }
@@ -431,6 +421,7 @@
   justify-content: space-around;
   align-items: center;
   align-content: space-between;
+  list-style: none;
 }
 .footer__item {
   font-size: 0.8rem;
@@ -465,11 +456,13 @@
 }
 .main .caracteristicas {
   text-align: center;
-  margin: 15px 0 30px 0;
+  margin: -55px 0 30px 0;
   /* animar */
 }
 .main .caracteristicas__bloque {
-  margin: 50px 0;
+  margin: 80px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .main .caracteristicas__barchart {
   width: 100%;
@@ -502,7 +495,13 @@
   margin-top: 10px;
 }
 .main .precios__tarjeta {
-  padding: 0 200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.main .precios__tarjeta .tarjeta {
+  width: 18rem;
+  height: 28rem;
 }
 .main .precios__titulo {
   text-align: center;
@@ -514,10 +513,9 @@
 @media (max-width: 575.98px) {
   .main .caracteristicas {
     text-align: center;
-    margin: 0;
   }
   .main .caracteristicas__bloque {
-    margin: 0;
+    grid-template-columns: 1fr;
   }
   .main .caracteristicas__barchart {
     margin-left: 0;
@@ -538,13 +536,18 @@
     width: 100%;
     height: 100%;
     padding-bottom: 100px;
-    margin-top: -100px;
   }
   .main .precios__tarjeta {
     padding: 0;
+    grid-template-columns: 1fr;
+  }
+  .main .precios__tarjeta .tarjeta {
+    margin-left: 15vw;
+    width: 18rem;
+    height: 28rem;
   }
   .main .precios__titulo {
-    padding-top: 220px;
+    padding-top: 280px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -586,7 +589,6 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
   .main .caracteristicas {
     text-align: center;
-    margin: 0;
   }
   .main .caracteristicas__bloque {
     margin: 0;
@@ -618,17 +620,27 @@
   .main .precios__titulo {
     padding-top: 220px;
   }
+  .main .tarjeta {
+    margin: 0rem 0rem 10rem 0rem;
+    width: 20rem;
+    height: 28rem;
+  }
 }
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) {
   .main .precios {
-    background-position: top center;
+    background-position: center top;
     width: 100%;
     height: 100%;
-    margin-top: -100px;
     margin-bottom: 100px;
+    margin-top: -100px;
   }
   .main .precios__tarjeta {
-    padding: 0 100px;
+    margin-top: 2rem;
+  }
+  .main .precios .tarjeta {
+    margin: 0rem 0rem 10rem 10rem;
+    width: 20rem;
+    height: 28rem;
   }
 }
 
